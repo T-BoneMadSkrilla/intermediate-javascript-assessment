@@ -14,6 +14,14 @@
 
 // CODE HERE...
 
+// THE BURNINATOR
+
+function callBinding(magicAnimals, updateAnimal, id){
+    this.updateAnimal = updateAnimal.bind(this)
+    var rightAnimal = magicAnimals.find((e)=>{return e === id})
+    // console.log(rightAnimal)
+    return updateAnimal( "Trogdor")
+}
 
 
 // *************
@@ -29,6 +37,12 @@
 
 // CODE HERE...
 
+function applyBinding(magicAnimals, updateAnimal, id){
+    this.updateAnimal = updateAnimal.bind(this)
+    var rightAnimal = magicAnimals.find((e)=>{return e === id})
+
+    return updateAnimal(['being majestic', 'eating rainbows']);
+}
 
 
 // *************
